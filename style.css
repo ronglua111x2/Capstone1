@@ -1,15 +1,65 @@
+/* niềm đau chắc rồi sẽ đến niềm vui - 22/07/24 */
+html{
+    background-image: url(./assets/philipp-a-urlich-cpncept513.jpg);
+    background-size: cover;
+}
 
-.kalnia-glaze-bao718 {
-  font-family: "Kalnia Glaze", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 200;
+body{  
+    background-size: cover;
+    width: 900px;
+    margin-left: 25%;
+    background-color: burlywood;
+    font-family: "Merriweather", serif;
 }
-background{
-    background-color: rgb(92, 79, 58);
-}
+
 footer{
     background-color: rgb(164, 163, 163);
+    float: right;
+}
+
+.card{
+    border: solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.portrait{
+    height: 15rem; 
+    width: ;
+    float: left;
+}
+
+.portrait > img{
+    height: 15rem; 
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+.head{ 
+    width: 40rem;
+    height: 240px;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.motivation-quote{
+    clear: both;
+    width: 65%; 
+    margin: 10px 20%;   
+}
+
+.motivation-quote > p{
+    font-family: "Kalnia Glaze", serif ;
+    text-align: center;
+}
+
+.goal{
+    
+   
+}
+
+.stats{
+   
 }
