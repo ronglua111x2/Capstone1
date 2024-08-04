@@ -1,65 +1,125 @@
 /* niềm đau chắc rồi sẽ đến niềm vui - 22/07/24 */
-html{
-    background-image: url(../assets/philipp-a-urlich-cpncept513.jpg);
-    background-size: cover;
+body{
+    font-family: "Kanit", sans-serif;
+    background: rgb(47,46,59);
+    background: linear-gradient(90deg, rgba(47,46,59,1) 0%, rgba(88,115,74,1) 20%, rgba(135,177,95,1) 61%, rgba(246,246,246,1) 100%);
 }
 
-body{  
-    background-size: cover;
-    width: 900px;
-    margin-left: 25%;
-    background-color: burlywood;
-    font-family: "Merriweather", serif;
+.timeline {
+    border-left: 3px solid #f0c724;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(114, 124, 245, 0.09);
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    max-width: 40%;
 }
 
-footer{
-    background-color: rgb(164, 163, 163);
-    float: right;
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
 }
 
-.card{
-    border: solid;
-    border-radius: 25px;
-    margin: 10px;
+.timeline h1 {
+    font-weight: 300;
+    font-size: 1.4em;
 }
 
-.portrait{
-    height: 15rem; 
-    width: ;
-    float: left;
+.timeline h2,
+.timeline h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-.portrait > img{
-    height: 15rem; 
-    object-fit: cover;
-    border-radius: 25px;
+.timeline .event {
+    border-bottom: 1px dashed #32559c;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
 }
 
-
-.head{ 
-    width: 40rem;
-    height: 240px;
-    margin-right: 20px;
-    display: inline-block;
-    padding: 0px 10px;
+@media (max-width: 767px) {
+    .timeline .event {
+        padding-top: 30px;
+    }
 }
 
-.motivation-quote{
-    clear: both;
-    width: 65%; 
-    margin: 10px 20%;   
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
 }
 
-.motivation-quote > p{
-    font-family: "Kalnia Glaze", serif ;
-    text-align: center;
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
 }
 
-.goal{
-    
-   
+.timeline .event:before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
 }
 
-.stats{
-   
+@media (max-width: 767px) {
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event:after {
+    -webkit-box-shadow: 0 0 0 3px #f0c724;
+    box-shadow: 0 0 0 3px #f0c724;
+    left: -55.8px;
+    background: #fff;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
+
+.rtl .timeline {
+    border-left: 0;
+    text-align: right;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 3px solid #d6f572;
+}
+
+.rtl .timeline .event::before {
+    left: 0;
+    right: -170px;
+}
+
+.rtl .timeline .event::after {
+    left: 0;
+    right: -55.8px;
+}
+
+.bg-green{
+    background-color: rgba(212, 244, 235, 0.24) ;
 }
